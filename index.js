@@ -5,10 +5,10 @@ var port = process.env.PORT || 5000;
 
 process.env.PWD = process.cwd();
 
-app.use(express.static(process.env.PWD + '/'));
+app.use(express.static(process.env.PWD + '/public'));
 
 app.get('*', function (req, res) {
-  res.render(process.env.PWD + '/index.html');
+  res.render(process.env.PWD + '/public/index.html');
 })
 
 app.listen(port, function() {
