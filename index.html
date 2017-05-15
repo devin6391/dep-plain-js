@@ -1,0 +1,109 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Plain-JS app</title><style media="screen">.hide-children * {
+  display: none;
+}
+.hidden {
+  display: none;
+}
+body {
+  margin: 0;
+}
+.server-mock {
+  /*border: 1px solid #000;*/
+}
+
+      .ui-loader {
+  animation: load 1s linear infinite;
+  border: .5em solid #555;
+  border-radius: 50%;
+  display: block;
+  height: 2em;
+  left: 50%;
+  margin: -1.5em;
+  position: absolute;
+  top: 50%;
+  width: 2em;
+}
+.ui-loader:after {
+  border: .5em solid #6cf;
+  border-radius: 50%;
+  bottom: .25em;
+  content: '';
+  left: .25em;
+  position: absolute;
+  right: .25em;
+  top: .25em;
+}
+.ui-loader:before {
+  border-bottom: 1em solid #6cf;
+  border-left: .7em solid transparent;
+  border-right: .7em solid transparent;
+  content: '';
+  height: 0;
+  left: 50%;
+  margin-left: -.7em;
+  position: absolute;
+  top: -.25em;
+  width: 0;
+}
+@keyframes load {
+  100% { transform: rotate(360deg); }
+}</style><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#fff"><meta name="application-name" content="VanillaJS-webpack App"><link rel="apple-touch-icon" sizes="57x57" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="VanillaJS-webpack App"><link rel="icon" type="image/png" sizes="32x32" href="icons-0cded3a3276425911d55a2552bf361bf/favicon-32x32.png"><link rel="icon" type="image/png" sizes="192x192" href="icons-0cded3a3276425911d55a2552bf361bf/android-chrome-192x192.png"><link rel="icon" type="image/png" sizes="16x16" href="icons-0cded3a3276425911d55a2552bf361bf/favicon-16x16.png"><link rel="shortcut icon" href="icons-0cded3a3276425911d55a2552bf361bf/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="icons-0cded3a3276425911d55a2552bf361bf/apple-touch-startup-image-1536x2008.png"></head><body><div class="loader-container"><i class="ui-loader"></i></div><div class="header"></div><div class="main-body"> <%
+    String[] authors = request.getParameterValues("author");
+    if (authors != null) {
+  %> <%@ page import = "java.sql.*" %> <h3>${rset.firstName}</h3><h4>${rset.lastName}</h4></div><div class="footer"></div><script>var loaderJs = function () {
+  var parentElem = null;
+  var loaderElem = null;
+  window.showLoader = function (containerClass) {
+    if (typeof document !== "undefined") {
+      loaderElem = document.querySelector('.loader-container');
+      parentElem = document.querySelector(containerClass);
+      parentElem.classList.add('hide-children');
+      loaderElem.classList.remove('hidden');
+    }
+  };
+
+  window.hideLoader = function () {
+    parentElem.classList.remove('hide-children');
+    loaderElem.classList.add('hidden');
+  };
+}();
+      var mainJs = function () {
+  console.log('running main js file');
+  if (typeof window.showLoader !== "undefined") window.showLoader('.main-body');
+
+  if (typeof window.hideLoader !== "undefined" && typeof document !== "undefined") {
+    document.addEventListener("appReady", function (e) {
+      console.log(e.msg);
+      window.hideLoader();
+    });
+  }
+};
+      setTimeout(() => {
+        mainJs();
+      }, 0);</script><script type="text/javascript">(function () {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('vanilla-sw-precache.js').then(function (reg) {
+			reg.onupdatefound = function () {
+				var installingWorker = reg.installing;
+
+				installingWorker.onstatechange = function () {
+					switch (installingWorker.state) {
+						case 'installed':
+							if (navigator.serviceWorker.controller) {
+								console.log('New or updated content is available.');
+							} else {
+								console.log('Content is now available offline!');
+							}
+							break;
+
+						case 'redundant':
+							console.error('The installing service worker became redundant.');
+							break;
+					}
+				};
+			};
+		}).catch(function (e) {
+			console.error('Error during service worker registration:', e);
+		});
+	}
+})();</script><script type="text/javascript" src="commons.chunk.js-168a9450ccf5d1e22775.js"></script><script type="text/javascript" src="polyfills-7c0648c2eebbf7114ea9.js" async></script><script type="text/javascript" src="app-shell-d1c3df367d75e8d347d2.js" async></script><script type="text/javascript" src="custom-jq-95e7575f4b953c92c7f8.js" async></script></body></html>
