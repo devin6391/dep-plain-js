@@ -1,12 +1,14 @@
 var express = require('express')
-var app = express()
+var app = express();
 
-app.use(express.static(__dirname + '/'));
+process.env.PWD = process.cwd();
+
+app.use(express.static(process.env.PWD + '/'));
 
 app.get('*', function (req, res) {
-  res.sendfile('./index.html');
+  res.sendfile(process.env.PWD + '/index.html');
 })
 
 app.listen(5000, function() {
-  console.log("running app on 500 port");
+  console.log("running app on 5000 port");
 })
