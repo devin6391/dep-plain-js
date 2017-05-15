@@ -1,0 +1,14 @@
+{
+  "name": "plain-js-pwa",
+  "version": "1.0.0",
+  "description": "This is a PWA built in plain js with some libraries",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "author": "vineetdev2008@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express"    : "~4.7.2"
+  }
+}
